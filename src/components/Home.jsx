@@ -19,6 +19,7 @@ const Home = () => {
 
   const WEATHER_KEY = import.meta.env.VITE_WEATHER_API_KEY;
 
+
   // Move fetchWeather function outside useEffect
   const fetchWeather = async () => {
     const WEATHER_CITY_API_KEY = `https://api.openweathermap.org/data/2.5/weather?q=${searchQuery}&units=metric&appid=${WEATHER_KEY}`;

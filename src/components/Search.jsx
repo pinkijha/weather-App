@@ -10,9 +10,13 @@ const Search = ({ query, setQuery }) => {
   }, [query]);
 
   const handleSearch = () => {
+    
     const newQuery = inputRef.current.value.trim();
     if (newQuery) {
       setQuery(newQuery);
+    }
+    else{
+      alert('enter city name')
     }
   };
 
