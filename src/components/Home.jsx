@@ -52,7 +52,7 @@ const Home = () => {
 
   return (
     <div className='min-h-screen flex justify-center items-center bg-gray-200'>
-      <div className='flex justify-center bg-gradient-to-bl from-blue-600 to-blue-900 w-screen h-screen md:w-[450px] md:h-[550px] rounded-2xl shadow-2xl'>
+      <div className='flex justify-center bg-gradient-to-bl from-blue-600 to-blue-900 w-screen h-screen md:w-[450px] md:h-[550px] md:rounded-2xl md:shadow-2xl'>
         <div className='flex flex-col items-center'>
           {/* Pass the function reference, not call it */}
           <Search query={searchQuery} setQuery={setSearchQuery} weather={fetchWeather} />
