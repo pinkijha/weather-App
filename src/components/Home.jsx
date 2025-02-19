@@ -52,7 +52,7 @@ const Home = () => {
 
   return (
     <div className='min-h-screen flex justify-center items-center bg-gray-200'>
-      <div className='flex justify-center bg-gradient-to-bl from-blue-600 to-blue-900 w-[250px] h-[400px] md:w-[450px] md:h-[550px] rounded-2xl shadow-2xl'>
+      <div className='flex justify-center bg-gradient-to-bl from-blue-600 to-blue-900 w-screen h-screen md:w-[450px] md:h-[550px] rounded-2xl shadow-2xl'>
         <div className='flex flex-col items-center'>
           {/* Pass the function reference, not call it */}
           <Search query={searchQuery} setQuery={setSearchQuery} weather={fetchWeather} />
@@ -60,38 +60,38 @@ const Home = () => {
           {weatherData ? (
             <>
               <img
-                className='md:w-[150px] w-[100px] h-[100px] md:h-[150px]'
+                className='md:w-[150px] w-[150px] h-[150px] md:h-[150px]'
                 src={weatherData.icon}
                 alt='Weather Icon'
               />
-              <p className='flex font-bold text-white text-[40px] md:text-[70px] justify-center'>
+              <p className='flex font-bold text-white text-[60px] md:text-[70px] justify-center'>
                 {weatherData.temp}°C
               </p>
-              <p className='flex text-white text-[30px] md:text-[40px] justify-center'>
+              <p className='flex text-white text-[40px] md:text-[40px] justify-center'>
                 {weatherData.location}
               </p>
 
-              <div className='flex md:mt-4 mt-3 gap-4 md:gap-7'>
+              <div className='flex md:mt-4 mt-12 gap-10 md:gap-7'>
                 <div className='flex text-white items-center gap-2'>
                   <img
-                    className='md:w-10 md:h-10 w-5 h-5'
+                    className='md:w-10 md:h-10 w-12 h-12'
                     src='https://uxwing.com/wp-content/themes/uxwing/download/signs-and-symbols/recycle-symbol-white-icon.png'
                     alt='Humidity Icon'
                   />
-                  <p className='flex flex-col text-lg '>
+                  <p className='flex flex-col text-2xl '>
                     {weatherData.humidity}%
-                    <span className='text-xs'>Humidity</span>
+                    <span className='text-sm'>Humidity</span>
                   </p>
                 </div>
                 <div className='flex text-white items-center gap-2'>
                   <img
-                    className='md:w-11 md:h-11 w-6 h-6 rounded-4xl'
+                    className='md:w-11 md:h-11 w-12 h-12 rounded-4xl'
                     src='https://media.istockphoto.com/id/1368763816/vector/wind-blow-vector-icon-air-puff-symbol.jpg?s=612x612&w=0&k=20&c=0GIijczbW0qFbHtaPWS9tf-QUSYCRr627AkUp5I0jRo='
                     alt='Wind Speed Icon'
                   />
-                  <p className='flex flex-col text-md '>
+                  <p className='flex flex-col text-2xl '>
                     {weatherData.windSpeed} km/h
-                    <span className='text-xs'>Wind Speed</span>
+                    <span className='text-sm'>Wind Speed</span>
                   </p>
                 </div>
               </div>
